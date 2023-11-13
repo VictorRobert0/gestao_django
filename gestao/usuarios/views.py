@@ -62,4 +62,4 @@ def valida_login(request):
 
 def index(request):
     form = Usuario()
-    return render (request, 'index.html', {'form': form})
+    return render (request, 'index.html',{'form': form})
