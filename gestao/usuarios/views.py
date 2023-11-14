@@ -35,7 +35,7 @@ def valida_cadastro(request):
     if len(usuario) > 0:
         return redirect('/usuarios/cadastro/?status=3')
     try:
-        password = sha256(password.encode()).hexdigest
+        #password = sha256(password.encode()).hexdigest
         usuario = Usuario(username = username, email = email, password = password)
         usuario.save()
         
@@ -48,7 +48,7 @@ def valida_cadastro(request):
 def valida_login(request):
     email = request.POST.get('email_login')
     password = request.POST.get('senha_login')
-    password = sha256(password.encode()).hexdigest()
+    #password = sha256(password.encode()).hexdigest()
     
 
     usuario = Usuario.objects.filter (email= email).filter(password = password)
