@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Usuario
 from django.shortcuts import redirect
-from hashlib import sha256
+#from hashlib import sha256
 
 # Create your views here.
 
